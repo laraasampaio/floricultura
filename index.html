@@ -1,1 +1,175 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lara Flores</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f0f0f0;
+    }
+    
+    header {
+        background-color: #ffffff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    h1 {
+        margin: 0;
+        color: #333333;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #333333;
+        font-weight: bold;
+    }
+    
+    nav ul li a:hover {
+        color: #ff6600;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    section {
+        margin-bottom: 30px;
+    }
+    
+    h2 {
+        color: #333333;
+    }
+    
+    p {
+        color: #666666;
+    }
+    
+    .produto {
+        background-color: #ffffff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .produto img {
+        max-width: 100%;
+        border-radius: 5px;
+    }
+    
+    .produto h3 {
+        color: #333333;
+        margin-top: 10px;
+    }
+    
+    .produto p {
+        color: #666666;
+    }
+    
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    
+    form button {
+        background-color: #ff6600;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    form button:hover {
+        background-color: #ff8533;
+    }
+</style>
+    
+</head>
+<body>
+    <header>
+        <h1>Floricultura Lara Flores</h1>
+        <nav>
+            <ul>
+                <li><a href="#sobre">Sobre Nós</a></li>
+                <li><a href="#servicos">Nossos Serviços</a></li>
+                <li><a href="#produtos">Nossos Produtos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <main>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>A Floricultura Lara Flores é uma empresa dedicada a fornecer as mais belas flores e arranjos para nossos clientes. Com uma equipe apaixonada por flores, estamos comprometidos em oferecer produtos de alta qualidade e um excelente atendimento.</p>
+        </section>
+
+        <section id="servicos">
+            <h2>Nossos Serviços</h2>
+            <ul>
+                <li>Arranjos Florais Personalizados</li>
+                <li>Buquês de Flores</li>
+                <li>Vasos Decorativos</li>
+            </ul>
+        </section>
+
+        <section id="produtos">
+            <h2>Nossos Produtos</h2>
+            
+            <div class="produto">
+                <img src="https://i.imgur.com/qLZlSht.jpeg" alt="Arranjo Floral">
+                <h3>Arranjo Floral de Rosas</h3>
+                <p>Arranjo floral no vidro. 100 R$</p>
+            </div>
+            <div class="produto">
+                <img src="https://i.imgur.com/1TnrizW.jpeg" alt="Buquê de Flores">
+                <h3>Buquê de Flores Variadas</h3>
+                <p>Buquê de flores Personalizados. A partir de 50 R$</p>
+            </div>
+            <div class="produto">
+                <img src="https://i.imgur.com/oYW807l.jpeg" alt="Vasos Decorativos">
+                <h3>Vasos decorativos</h3>
+                <p>Vasos variados. A partir de 35 R$</p>
+            </div>
+            
+        </section>
+
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Entre em contato conosco para fazer um pedido ou obter mais informações:</p>
+            <form>
+                <input type="text" placeholder="Seu Nome" required>
+                <input type="email" placeholder="Seu E-mail" required>
+                <textarea placeholder="Sua Mensagem"></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Floricultura Lara Flores. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
