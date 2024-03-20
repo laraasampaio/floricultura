@@ -182,6 +182,54 @@
     <footer>
         <p>&copy; 2024 Floricultura Lara Flores. Todos os direitos reservados.</p>
     </footer>
-    
+    <script src="https://www.parsecdn.com/js/parse-1.18.5.min.js"></script>
+
+
+    <script>
+       Parse.initialize("zxiJl8CyILacvJ527nz0nKZEbEjoxKo0PeS6iFc0", "CO3BJieDwcF5xQeMb4EaBn0UOqvImYtQdQzjAF04");
+    Parse.serverURL = "https://parseapi.back4app.com/";
+
+    const Product = Parse.Object.extend("Product");
+
+    function loadProducts() {
+        const query = new Parse.Query(Product);
+        query.find().then((results) => {
+            const productList = document.getElementById("productList");
+            productList.innerHTML = ""; // Limpar a lista antes de recarregar
+
+            results.forEach((product) => {
+                const li = document.createElement("li");
+                li.textContent = `${product.get("name")} - ${product.get("description")} - R$ ${product.get("price")}`;
+                productList.appendChild(li);
+            });
+        }).catch((error) => {
+            console.error("Erro ao carregar produtos:", error);
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        loadProducts();
+    });
+
+    document.getElementById("productForm").addEventListener("submit", (event) => {
+        event.preventDefault(); // Impedir o envio do formulário
+
+        const productName = document.getElementById("productName").value;
+        const productDescription = document.getElementById("productDescription").value;
+        const productPrice = parseFloat(document.getElementById("productPrice").value);
+
+        const product = new Product();
+        product.set("name", productName);
+        product.set("description", productDescription);
+        product.set("price", productPrice);
+
+        product.save().then(() => {
+            console.log("Produto adicionado com sucesso!");
+            loadProducts(); // Recarregar a lista de produtos
+        }).catch((error) => {
+            console.error("Erro ao adicionar produto:", error);
+        });
+    });
+    </script>
 </body>
 </html>
